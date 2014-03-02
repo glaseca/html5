@@ -1,0 +1,15 @@
+body { font-family: Helvetica, Verdana, Arial; background-color: #F2F2F2; color: #2E2E2E; }
+
+#contenedor { margin: 0 auto; width: 80%; padding: 30px; background: #FAFAFA url('../images/firefox.png') no-repeat 90% 10%; }
+
+.ahora { color: #8C2300; font-size: 0.8em; }
+
+.seccion { text-decoration: underline; }
+
+.cabecera { background-color: #F2F2F2; padding: 2px 12px; }
+
+.fecha_publicacion { color: #B40431; font-size: 0.8em; }
+
+.mas a{ color: #0000FF; text-decoration: underline; }
+
+.mas a:hover{ color: orange; text-decoration: underline; }
