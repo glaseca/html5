@@ -11,7 +11,7 @@
 		<p>
 			<script type="text/javascript">
 				var ahora = new Date();
-				document.writeln("Está leyendo esta noticia el: "+ahora.getDate()+"/"+(ahora.getMonth()+1)+"/"+ahora.getFullYear()+" a las "+ahora.getHours()+":"+ahora.getMinutes());
+				document.writeln("Está leyendo esta noticia el: "+ahora.getDate()+"/"+(ahora.getMonth()+1)+"/"+ahora.getFullYear()+" a las "+(ahora.getHours()<10?'0':'')+ahora.getHours()+":"+(ahora.getMinutes()<10?'0':'')+ahora.getMinutes());
 			</script>		
 		</p>
 	</div>
