@@ -1,0 +1,79 @@
+body {
+	margin:0 auto;
+	width:920px;
+}
+
+nav h1 {
+	font-size:3em;
+	font-family:sans-serif;
+	font-weight:bold;
+	padding:10px;
+	margin:0px;
+	background-color:#000;
+	color:#FFF;	
+}
+
+nav ul { 
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+nav ul li {
+	display:inline;	
+}
+
+nav ul li a {
+	font-weight:bold;
+	font-family:Helvetica, Arial;
+	color:#FFF;
+	display:block;
+	float:left;
+	border:1px solid #FFF;
+	padding:8px 15px;
+	text-decoration:none;	
+}
+nav ul li a:hover {
+	color:#FFFF26;
+	background-color:#336600;
+}
+
+.news a {
+	background-color:#59B300;
+}
+
+.sport a {
+	background-color:#59B310;
+}
+
+.weather a {
+	background-color:#59B320;
+}
+
+.capital a {
+	background-color:#59B330;
+}
+
+.culture a {
+	background-color:#59B340;
+}
+
+.autos a {
+	background-color:#59B350;
+}
+
+.tv a {
+	background-color:#59B360;
+}
+
+.radio a {
+	background-color:#59B370;
+}
+
+.more a {
+	background-color:#59B380;
+}
+
+.clear {
+	clear:both;
+}
