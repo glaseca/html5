@@ -1,0 +1,39 @@
+body {
+	margin:0 auto;
+	width:920px;
+}
+
+nav h1 {
+	font-size:2em;
+	font-family:Arial;
+	font-style:italic;
+	padding:10px;
+	margin:0px;
+	background-color:#7F00FF;
+	color:#FFF;
+	text-align:center;
+	width:100%;
+}
+
+nav ul { 
+	list-style-type:none;
+	margin: 0px;
+	padding: 0px;
+	clear:both;
+}
+
+nav ul li a {
+	font-weight:bold;
+	font-family:Helvetica, Arial;
+	color:#00A3D9;
+	background-color:#BFFFEF;
+	display:block;
+	text-decoration:none;
+	border:1px solid #003366;
+	padding:10px;
+	width:120px;
+	text-align:center;
+}
+nav ul li a:hover {	
+	background-color:#003366;
+}
