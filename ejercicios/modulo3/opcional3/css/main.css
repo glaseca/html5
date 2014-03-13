@@ -1,0 +1,38 @@
+@font-face {
+	font-family: FiraSans;
+	src: url(../fonts/FiraSansOT-Regular.otf) format("opentype");
+}
+
+body {
+	width: 920px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+}
+
+h2 {
+	text-decoration: underline;
+}
+
+article {
+	margin: 0 20px;
+}
+
+footer {
+	margin: 50px 0 0;
+}
+
+footer p {
+	text-align: center;
+	font-size: 0.8em;
+}
+
+.firefox-font{
+	font-family: 'FiraSans';
+}
+.google-font{
+	font-family: 'Open Sans', sans-serif;
+}
