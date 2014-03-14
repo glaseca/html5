@@ -1,0 +1,31 @@
+#contenido {
+	width: 920px;
+	height: 518px;
+	margin: 0 auto;
+	background: url(../images/logo_miriada.png) left bottom repeat-x,
+	url(../images/Lune_ico.png) 85% 10% no-repeat,
+	url(../images/FirefoxOS2.png) left top no-repeat;	
+}
+
+header {
+	padding: 30px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3em;
+	width:300px;
+	background-color:#EEE;
+	margin: 0 auto;
+	border: 2px solid #333;
+	border-radius: 12px;
+	font-family: Verdana, Arial, sans-serif;	
+}
+
+#caja{
+	margin: 10px auto;
+	width: 600px;
+	background-color:#EEE;
+	text-align: center;	
+	box-shadow: 5px 5px 3px #333;
+}
