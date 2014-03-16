@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Propiedades de objetos en JavaScript</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div id="contenido">
+		<header>
+			<h1>Propiedades de objetos en JavaScript</h2>
+		</header>
+		<h3 id="descripcion"></h3>
+		<table id="tabla">
+			<thead>
+				<tr><th> Propiedad </th><th> Valor </th></tr>
+			</thead>
+		</table>
+		<script type="text/javascript">
+			var tabla = document.getElementById("tabla");
+			var descripcion = document.getElementById("descripcion");
+			var valor;
+			var objeto = prompt("Introduce un objeto del DOM del que quieras conocer sus propiedades:").toLowerCase();
+			var fila = "impar";				
+			if(objeto == "window"){
+				descripcion.innerHTML = "Objeto \"window\"<br />";									
+				for(var propiedad in window){
+				
+					
+				
+				
+					if(typeof(window[propiedad]) == "function" || typeof(window[propiedad]) == "object"){
+						valor = "no es imprimible";
+					}else{
+						valor = window[propiedad];
+					}					
+					tabla.innerHTML+="<tr class=\""+fila+"\"><td>"+propiedad+"</td><td>"+valor+"</td></tr>";
+					
+					if(fila=="impar"){
+						fila="par";
+					}else{
+						fila="impar";
+					}
+					
+				}					 
+			}else if(objeto in window){
+				descripcion.innerHTML = "Objeto \""+objeto+"\"<br />";					
+				for(var propiedad in window[objeto]){									
+					if(typeof(window[objeto][propiedad]) == "function" || typeof(window[objeto][propiedad]) == "object"){
+						valor = "no es imprimible";
+					}else{
+						valor =window[objeto][propiedad];
+					}						
+					tabla.innerHTML+="<tr class=\""+fila+"\"><td>"+propiedad+"</td><td>"+valor+"</td></tr>";
+					
+					if(fila=="impar"){
+						fila="par";
+					}else{
+						fila="impar";
+					}
+					
+				}					
+			}else{
+				descripcion.innerHTML = "\""+objeto+"\" no existe en el DOM<br />";
+				tabla.innerHTML="";
+			}			
+		</script>		
+	</div>
+</body>
+</html>
