@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Bucles (while)</title>
+</head>
+<body>
+	<div id="contenido">
+		<header>
+			<h1>Bucles (while)</h2>
+		</header>
+		<div>
+			<script type="text/javascript">
+				var acumulado = 0;
+				var respuesta = 0;
+				var error = "";
+								
+				solicitar_numero(acumulado, error);
+				
+				while(respuesta!=="acabar"){
+					if(!isNaN(respuesta) && respuesta != "" && respuesta != undefined){
+						valor = parseInt(respuesta);
+						acumulado += valor;
+						error = "";
+					}else{						
+						error = "Entrada erronea, vuelva a intentarlo.\n\n";
+					}
+					solicitar_numero(acumulado,error);
+				}
+				
+				mostrar_resultado();
+				
+				function solicitar_numero(acumulado,error){
+					respuesta = prompt(error+"Introduce un número para sumarlo a "+acumulado+" o el texto \"acabar\" para terminar de añadir números a la suma");
+				}	
+				
+				function mostrar_resultado(){
+					document.writeln("El resultado final de la suma es: "+acumulado);
+				}				
+			</script>
+		</div>
+	</div>
+</body>
+</html>
