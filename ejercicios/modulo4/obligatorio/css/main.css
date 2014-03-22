@@ -1,0 +1,15 @@
+body { width: 920px; margin: 0 auto; font-family: Verdana, Helvetica, sans-serif; }
+
+header h1 { text-align: center; text-decoration: underline; }
+
+h3 { text-align: center; }
+
+#tabla { margin: 30px auto; border-collapse:collapse; }
+
+#tabla thead tr th { background-color: #1A0066; color: #FFF; } 
+
+#tabla td, #tabla th{ border: 1px solid #000; padding: 5px 10px; margin: 0; }
+
+.par { background-color: #EEE; }
+
+.impar { background-color: #DDD; }

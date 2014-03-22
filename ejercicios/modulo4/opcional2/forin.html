@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sentencias for/in en JavaScript</title>
+</head>
+<body>
+	<div id="contenido">
+		<header>
+			<h1>Sentencias for/in en JavaScript</h2>
+		</header>
+		<div>
+			<script type="text/javascript">
+				var y = {x:'hola', y:'que', z:'tal', t:'estás'};
+				var	frase = "";
+				
+				for(var palabra in y){
+					frase+=y[palabra]+" ";					// Concatenamos los valores de las propiedades del objeto.				
+				}
+				
+				frase=frase.substring(0,frase.length-1);	// Eliminamos el último espacio en blanco.
+				document.write(frase);						// Imprimimos la frase generada.				
+			</script>
+		</div>
+	</div>
+</body>
+</html>
