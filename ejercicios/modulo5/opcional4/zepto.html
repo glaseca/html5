@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Botones y formularios</title>
+	<script type="text/javascript" src="http://zeptojs.com/zepto.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {	
+			$('#comprobar').on('click',function(){
+				var respuesta = document.getElementById("respuesta");
+				var resultado = document.getElementById("resultado");
+				
+				if($('#respuesta').val() === "Cristobal Colón"){
+					$('#resultado').html("Respuesta correcta");
+					$('#resultado').css('color','green');
+				}else{
+					$('#resultado').html("Respuesta incorrecta");
+					$('#resultado').css('color','red');
+					$('#respuesta').val("pruebe otra vez");
+					$('#respuesta').css('color','grey');
+				}
+			});
+			
+			$('#respuesta').on('click',function(){
+				if(($('#respuesta').val() === "pruebe otra vez") || ($('#respuesta').val() === "responda aquí")){
+					$('#respuesta').val("");
+					$('#respuesta').css('color','black');
+				}
+			});	
+		});	
+	</script>
+	<style>
+		body { width: 920px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif;}
+		header h1 { text-align: center; }
+		#respuesta { color: grey; }	
+		article { text-align: center; }
+	</style>
+</head>
+<body>
+	<div id="contenido">
+		<header>
+			<h1>Botones y formularios</h2>
+		</header>
+		<article>
+			<p>¿Quién descubrió América?</p>
+			<input type="text" value="responda aquí" id="respuesta"/> 
+			<button id="comprobar">Comprobar</button>
+			<p id="resultado"></p>
+		</article>
+	</div>
+</body>
+</html>

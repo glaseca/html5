@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eventos</title>
+	<script type="text/javascript">
+		var i;
+
+		function inicio(){
+			document.getElementById("reloj").addEventListener('onload', mostrar_hora());				
+		}
+		
+		function detener_reanudar(){
+			if(document.getElementById("boton").innerHTML == "PAUSA"){
+				clearInterval(i);
+				document.getElementById("boton").innerHTML = "REANUDAR";
+			}else{
+				mostrar_hora();
+				document.getElementById("boton").innerHTML = "PAUSA";				
+			}		
+		};
+		
+		function mostrar_hora(){
+			i = setInterval(function(){
+				var hora = new Date();
+				hora_completa = doble_digito(hora.getHours())+" horas, "+doble_digito(hora.getMinutes())+" minutos, "+doble_digito(hora.getSeconds())+" segundos, "+triple_digito(hora.getMilliseconds())+" ms";
+				document.getElementById("reloj").innerHTML = hora_completa;
+			},1);
+		}
+		
+		function doble_digito(num){
+			if(num<10){
+				return "0"+num;
+			}else{
+				return num;
+			}
+		}
+		
+		function triple_digito(num){
+			if(num<100){
+				return "0"+doble_digito(num);
+			}else{
+				return num;
+			}
+		}
+		
+	</script>
+	<style>
+		body { width: 920px; margin: 0 auto; font-family: Arial, Helvetica, sans-serif;}
+		header h1 { text-align: center; }
+		#reloj { text-align: center; }
+		#boton { width: 100px; padding: 5px 10px; margin: 3% 45%; font-weight: bold; }		
+	</style>
+</head>
+<body onload="inicio();">
+	<div id="contenido">
+		<header>
+			<h1>Eventos</h2>
+		</header>
+		<div id="reloj"></div>
+		<button id="boton" onClick="detener_reanudar();">PAUSA</button>
+	</div>	
+</body>
+</html>
