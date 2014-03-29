@@ -1,0 +1,15 @@
+body { width: 920px; margin: 0 auto; font-family: Verdana, Arial, sans-serif; text-align: center; }
+
+h1 { text-decoration: underline; }
+
+#mensaje_error {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 720px;
+    margin-left: -360px;
+    margin-top: -60px;
+    font-size: 18px;
+    color: white;
+	background-color: red;
+}

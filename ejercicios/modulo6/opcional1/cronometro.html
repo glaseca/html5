@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cronómetro</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/zepto.min.js" > </script>
+	<script type="text/javascript">
+	  $(function(){ 
+		var t, tiempo_parada, cl = $("#crono"), paradas = $("#paradas"), error = $("#mensaje_error");
+		
+		error.hide();
+		
+		function mostrar()  {
+			cl.html((+cl.html() + 0.01).toFixed(2));
+		};
+		function arrancar() {
+			t=setInterval(mostrar, 10);
+		};
+		function parar()    {
+			clearInterval(t);
+			t=undefined;
+		};
+		function cambiar()  {
+			if (!t){
+				arrancar();
+				
+			}else{
+				parar();
+				error.hide();
+				tiempo_parada = cl.html();
+				paradas.append('<br />'+tiempo_parada);
+			};
+		}		
+		$("#cambiar").on('click', cambiar);
+		$("#inicializar").on('click', function(){ 
+			if(t===undefined){
+				cl.html("0.00");
+				paradas.html("");
+			}else{
+				error.show();
+			}
+		});
+	  });
+	  
+	  
+	  $("#some_element").animate({
+  opacity: 0.25, left: '50px',
+  color: '#abcdef',
+  rotateZ: '45deg', translate3d: '0,10px,0'
+}, 500, 'ease-out')
+	  
+	</script>
+</head>
+<body>
+<h1>Cronómetro</h1>
+	<h2><span id="crono"> 0.00 </span> segundos </h2>
+
+	<button type="button" id="cambiar"> arrancar/parar </button>
+	<button type="button" id="inicializar">  inicializar </button>
+	<div id="mensaje_error">No se puede detener el cronómetro, pulsa primero el botón "arrancar/parar"</div>
+	<div id="paradas"></div>
+</body>
+</html>
