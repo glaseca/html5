@@ -1,0 +1,30 @@
+#contenedor { width: 500px; height: 500px; margin: 0 auto; font-family: Verdana, Arial, sans-serif; text-align: center; background: url(../images/crono.png) left no-repeat; position: absolute; }
+
+#titulo { 
+	text-decoration: underline;
+	color: yellow;
+	position: absolute;
+	left: 95px;
+	top: 66px;
+}
+
+#crono { 
+	color: #FFFF00;
+	font-family: 'Press Start 2P',cursive;
+	font-size: 1.2em;
+	left: 130px;
+	position: absolute;
+	top: 220px;
+}
+
+#mensaje_error {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 720px;
+    margin-left: -360px;
+    margin-top: -60px;
+    font-size: 18px;
+    color: white;
+	background-color: red;
+}
