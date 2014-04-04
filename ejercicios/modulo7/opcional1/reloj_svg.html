@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reloj SVG</title><meta charset="UTF-8">
+<style type="text/css">
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: #eee;
+}
+
+#vector {
+	height: 100%;
+	width: 100%;
+}
+
+#vector text {
+	font-family: sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-align: center;
+	z-index:999;
+}
+
+#vector text#marca {
+	font-size: 1em;
+}
+
+</style>
+<script type="text/javascript" src="js/zepto.min.js" ></script>
+<script type="text/javascript">
+	function x2(n,i,x1,r) {return x1 + r*Math.sin(2*Math.PI*n/i);};
+	function y2(n,i,y1,r) {return y1 - r*Math.cos(2*Math.PI*n/i);};
+
+	$(function(){
+		function mostrar_hora(){
+			var d = new Date();
+			var h = d.getHours();
+			var m = d.getMinutes();
+			var s = d.getSeconds();
+			var horas, minutos, segundos;
+			var horas;
+			if(h<10){ horas = "0" + h; }else{ horas = h; }
+			if(m<10){ minutos = "0" + m; }else{ minutos = m; }			
+			if(s<10){ segundos = "0" + s; }else{ segundos = s; }
+			var decimas = d.getMilliseconds();
+			$('#vector #digital').html(horas + ":" + minutos + ":" + segundos);
+			$('#seg').attr('x2', x2(s,60,100,50)).attr('y2', y2(s,60,70,50));
+			$('#min').attr('x2', x2(m,60,100,40)).attr('y2', y2(m,60,70,40));
+			$('#hor').attr('x2', x2(h,12,100,30)).attr('y2', y2(h,12,70,30));
+			$('#dec').attr('x2', x2(decimas,1000,120,10)).attr('y2', y2(decimas,1000,90,10));
+		}
+		setInterval(function(){mostrar_hora();}, 100);
+		mostrar_hora();
+	})
+</script>
+</head>
+<body>
+	<svg id="vector" viewBox="0 0 200 200">
+		<rect id="correa" x="75" y="0" width="50" height="100%" fill="#db4e36" stroke="#db4e36" stroke-width="2"/>
+		<rect id="myRect" x="150" y="67.5" width="5" height="5" fill="#db4e36" stroke="#db4e36" stroke-width="2"/>
+		<circle id="myCircle" cx="100" cy="70" r="50" fill="white" stroke="black" stroke-width="3"/>
+		<circle id="my2ndCircle" cx="120" cy="90" r="10" fill="white" stroke="black" stroke-width="2"/>		
+		<line id="dec" x1="120" y1="90" x2="130" y2="100" style="stroke:brown;stroke-width:0.5"/>
+		<text id="digital" x="75" y="50" fill="brown"></text>
+		<line id="hor" x1="100" y1="70" x2="110" y2="80" style="stroke:#db4e36;stroke-width:5"/>
+		<line id="min" x1="100" y1="70" x2="80" y2="40" style="stroke:#db4e36;stroke-width:3"/>  
+		<line id="seg" x1="100" y1="70" x2="115" y2="45" style="stroke:brown;stroke-width:1"/>
+		<text id="marca" x="120" y="10" transform="rotate(90,50,55)" fill="brown">Miriada X</text>
+		
+	</svg>
+</body>
+</html>

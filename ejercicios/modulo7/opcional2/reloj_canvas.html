@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reloj Canvas</title><meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script type="text/javascript">
+		function x2(n,i,x1,r) {return x1 + r*Math.sin(2*Math.PI*n/i);};
+		function y2(n,i,y1,r) {return y1 - r*Math.cos(2*Math.PI*n/i);};
+		
+		function myLine(ctx,x1,y1,x2,y2,width,color) {
+			ctx.beginPath();           // comenzar nueva linea
+			ctx.moveTo(x1,y1);         // Comienzo de linea
+			ctx.lineTo(x2,y2);         // Final de linea
+
+			ctx.strokeStyle = color;   // color de línea
+			ctx.lineWidth = width;     // anchura de linea:  5 puntos
+			ctx.stroke();              // dibujar linea
+		}
+
+		function myCircle(ctx,x,y,r,width,color) {
+			ctx.beginPath();             // comenzar figura
+									   // añadir arco (circulo completo):
+			ctx.arc(x,y,r,0,2*Math.PI);  //     ctx.arc(x, y, r, start, stop)
+
+			ctx.strokeStyle = color;     // color de la línea del circulo
+			ctx.lineWidth = width;       // anchura de la línea del circulo
+			ctx.stroke();                // dibujar circulo
+		}
+		
+		function mostrar_hora(ctx){
+			var d = new Date();
+			var h = d.getHours();
+			var m = d.getMinutes();
+			var s = d.getSeconds();
+			var horas, minutos, segundos;
+			var horas;
+			if(h<10){ horas = "0" + h; }else{ horas = h; }
+			if(m<10){ minutos = "0" + m; }else{ minutos = m; }			
+			if(s<10){ segundos = "0" + s; }else{ segundos = s; }
+			var decimas = d.getMilliseconds();
+
+			ctx.clearRect(0,0,360,360)  // borrar CANVAS
+			
+			ctx.font = "25px Arial";
+			ctx.strokeStyle="white";
+			ctx.strokeText(horas + ":" + minutos + ":" + segundos,175,175);
+			ctx.strokeStyle="white";
+			ctx.rect(170,150,110,30);		
+			ctx.stroke();
+			
+			//myCircle(ctx,225,225,100,3,"black");   // esfera del reloj
+			myCircle(ctx,265,265,20,1,"white");   // esfera de miliseg.
+			
+			myLine(ctx,225,225,x2(h,12,225,60),y2(h,12,225,60),5,"grey"); // horas
+			myLine(ctx,225,225,x2(m,60,225,80),y2(m,60,225,80),3,"grey"); // min.
+			myLine(ctx,225,225,x2(s,60,225,100),y2(s,60,225,100),1,"red"); // seg.
+			myLine(ctx,265,265,x2(decimas,1000,265,20),y2(decimas,1000,265,20),1,"red"); // miliseg.
+			
+		}
+
+		$(function(){
+			var c=document.getElementById("myCanvas");
+			if(c.getContext){
+				var ctx = c.getContext("2d");
+				mostrar_hora(ctx);
+				setInterval(function(){mostrar_hora(ctx);}, 10);
+			}
+		})	
+	</script>
+</head>
+<body>
+	<div id="text"></div>
+	<canvas id="myCanvas" width="350" height="350">Your browser does not support the HTML5 canvas tag.</canvas>
+</body>
+</html>
