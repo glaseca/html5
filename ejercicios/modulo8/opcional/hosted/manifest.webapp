@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "name": "Cronómetro",
+  "description": "Croómetro que almacena los tiempos de parada.",
+  "launch_path": "/host/0B_l5mL5G3oPDa25PZzh6dmZGN1k/index.html",
+  "icons": {
+    "16":  "/host/0B_l5mL5G3oPDa25PZzh6dmZGN1k/ico_16.png",
+    "48":  "/host/0B_l5mL5G3oPDa25PZzh6dmZGN1k/ico_48.png",
+    "128": "/host/0B_l5mL5G3oPDa25PZzh6dmZGN1k/ico_128.png"
+  },
+  "developer": {
+    "name": "Guillermo Laseca",
+    "url": "http://glaseca.es"
+  }
+}
