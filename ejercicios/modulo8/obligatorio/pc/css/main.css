@@ -1,0 +1,93 @@
+body{
+	font-family: 'Days One', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#titulo{
+	position: relative;
+	height: 50px;
+	float: left;	
+}
+
+#titulo h1{
+	font-size: 1.5em;
+	margin: 10px;
+}
+
+button{
+	top: 5px;
+	float: left;
+	position: relative;
+	margin: 5px 20px;
+	background-color: #666;
+	color: white;
+	border: 3px solid black;
+	border-radius: 4px;
+	padding: 5px 8px;
+	font-weight: bold;
+	font-family: 'Varela Round',Arial,sans-serif;
+}
+
+#map{
+	clear: both;
+	display: block;
+	position: absolute;
+	top: 50px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	background-color: #93d0d9;
+	border: 3px solid black;
+}
+
+.overlay_inicio{
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  opacity: 0.8;
+  background-color: #4477aa;
+  border: solid 3px #336699;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px #333;
+  text-shadow: 1px 1px 1px #666;
+  padding: 0px 4px;
+  bottom: 58px;
+  right: 5px;
+  position: relative;
+}
+
+.overlay_destino{
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  opacity: 0.8;
+  background-color: #76b243;
+  border: solid 3px #3b5921;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px #333;
+  text-shadow: 1px 1px 1px #666;
+  padding: 0px 4px;
+  bottom: 58px;
+  right: 5px;
+  position: relative;
+}
+
+#aviso{
+	display: none;
+	background-color: #c33719;
+	color: #FFF;
+	width: 200px;
+	z-index: 9999;
+	position: absolute;
+	padding: 12px;
+	text-align: center;
+	border-radius:4px;
+	left: 42%;
+	top: 45%;
+	z-index: 9999;
+}
