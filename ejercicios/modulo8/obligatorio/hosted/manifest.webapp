@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "name": "Geolo",
+  "description": "Guarda tus rutas, busca tu destino",
+  "launch_path": "/html5/ejercicios/modulo8/obligatorio/hosted/index.html",
+  "icons": {
+    "16":  "/html5/ejercicios/modulo8/obligatorio/hosted/ico_16.png",
+    "48":  "/html5/ejercicios/modulo8/obligatorio/hosted/ico_48.png",
+    "128": "/html5/ejercicios/modulo8/obligatorio/hosted/ico_128.png"
+  },
+  "developer": {
+    "name": "Guillermo Laseca",
+    "url": "http://glaseca.es"
+  },
+  "permissions": {
+	"geolocation": {
+		"description": "Requerido para posicionar en el mapa"
+	}
+  },
+  "orientation": "landscape-primary"
+}
