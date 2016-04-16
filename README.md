@@ -3,6 +3,8 @@ html5
 
 ### Desarrollo en HTML5, CSS y Javascript de WebApps, incluyendo móviles FirefoxOS* (2a edición) [https://miriadax.net/web/firefox-os-2edicion](https://miriadax.net/web/firefox-os-2edicion)
 
+Curso impartido por profesores de la Universidad Politécnica de Madrid.
+
 Descripción:
 
 Este curso capacita para un primer nivel de desarrollo de aplicaciones móviles en HTML5, CSS y JavaScript accesibles desde PC, móvil, tableta, SmartTv u otros dispositivos que soporten HTML5. El curso es para principiantes en HTML5 e ilustra los conceptos con ejemplos sencillos y multidisciplinares, tanto de programación, como de diseño gráfico o de diseño de la interacción. Los participantes aprenderán a diseñar interfaces con HTML y CSS, así como a programar en JavaScript nuevas funcionalidades y aplicaciones. Se enseñará a crear aplicaciones Web genéricas independientes de dispositivo, así como a empaquetarlas para FirefoxOS. Empaquetarlas para Android o iPhone es sencillo, pero no se cubre en este curso.
